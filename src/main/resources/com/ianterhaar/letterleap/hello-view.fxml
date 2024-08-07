@@ -1,16 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.ianterhaar.letterleap.HelloController">
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="371.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ianterhaar.letterleap.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+    <AnchorPane prefHeight="600.0" prefWidth="371.0" VBox.vgrow="ALWAYS">
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+        <children>
+            <Button fx:id="btnEnter" layoutX="10.0" layoutY="520.0" onAction="#onHelloButtonClick" prefHeight="45.0" prefWidth="44.0" text="Enter" />
+            <Button fx:id="btnZ" layoutX="54.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="Z" />
+            <Button fx:id="btnX1" layoutX="86.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="X" />
+            <Button fx:id="btnC" layoutX="118.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="C" />
+            <Button fx:id="btnV" layoutX="150.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="V" />
+            <Button fx:id="btnB" layoutX="182.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="B" />
+            <Button fx:id="btnN" layoutX="214.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="N" />
+            <Button fx:id="btnM" layoutX="246.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="M" />
+            <Button fx:id="btnBack" layoutX="278.0" layoutY="520.0" prefHeight="45.0" prefWidth="44.0" text="Back" />
+            <Button fx:id="btnA" layoutX="24.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="A" />
+            <Button fx:id="btnS" layoutX="56.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="S" />
+            <Button fx:id="btnD" layoutX="88.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="D" />
+            <Button fx:id="btnF" layoutX="120.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="F" />
+            <Button fx:id="btnG" layoutX="152.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="G" />
+            <Button fx:id="btnH" layoutX="184.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="H" />
+            <Button fx:id="btnJ" layoutX="216.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="J" />
+            <Button fx:id="btnK" layoutX="248.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="K" />
+            <Button fx:id="btnL" layoutX="280.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="L" />
+            <Button fx:id="btnQ" layoutX="6.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="Q" />
+            <Button fx:id="btnW" layoutX="38.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="W" />
+            <Button fx:id="btnE" layoutX="70.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="E" />
+            <Button fx:id="btnR" layoutX="102.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="R" />
+            <Button fx:id="btnT" layoutX="134.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="T" />
+            <Button fx:id="btnY" layoutX="166.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="Y" />
+            <Button fx:id="btnU" layoutX="198.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="U" />
+            <Button fx:id="btnI" layoutX="230.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="I" />
+            <Button fx:id="btnO" layoutX="262.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="O" />
+            <Button fx:id="btnP" layoutX="294.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="P" />
+         <ToolBar layoutX="11.0" layoutY="14.0" prefHeight="60.0" prefWidth="309.0">
+            <items>
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+            </items>
+         </ToolBar>
+         <ToolBar layoutX="13.0" layoutY="82.0" prefHeight="60.0" prefWidth="309.0">
+            <items>
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+            </items>
+         </ToolBar>
+         <ToolBar layoutX="13.0" layoutY="150.0" prefHeight="60.0" prefWidth="309.0">
+            <items>
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+            </items>
+         </ToolBar>
+         <ToolBar layoutX="11.0" layoutY="222.0" prefHeight="60.0" prefWidth="309.0">
+            <items>
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+            </items>
+         </ToolBar>
+         <ToolBar layoutX="11.0" layoutY="291.0" prefHeight="60.0" prefWidth="309.0">
+            <items>
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+            </items>
+         </ToolBar>
+         <ToolBar layoutX="11.0" layoutY="359.0" prefHeight="60.0" prefWidth="309.0">
+            <items>
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
+            </items>
+         </ToolBar>
+            
+        </children>
+    </AnchorPane>
 </VBox>
