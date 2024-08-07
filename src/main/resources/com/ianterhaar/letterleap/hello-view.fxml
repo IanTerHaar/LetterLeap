@@ -3,100 +3,127 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="600.0" prefWidth="371.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ianterhaar.letterleap.HelloController">
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="373.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ianterhaar.letterleap.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <AnchorPane prefHeight="600.0" prefWidth="371.0" VBox.vgrow="ALWAYS">
-
+    <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="334.0" VBox.vgrow="ALWAYS">
         <children>
-            <Button fx:id="btnEnter" layoutX="10.0" layoutY="520.0" onAction="#onHelloButtonClick" prefHeight="45.0" prefWidth="44.0" text="Enter" />
-            <Button fx:id="btnZ" layoutX="54.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="Z" />
-            <Button fx:id="btnX1" layoutX="86.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="X" />
-            <Button fx:id="btnC" layoutX="118.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="C" />
-            <Button fx:id="btnV" layoutX="150.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="V" />
-            <Button fx:id="btnB" layoutX="182.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="B" />
-            <Button fx:id="btnN" layoutX="214.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="N" />
-            <Button fx:id="btnM" layoutX="246.0" layoutY="520.0" prefHeight="45.0" prefWidth="32.0" text="M" />
-            <Button fx:id="btnBack" layoutX="278.0" layoutY="520.0" prefHeight="45.0" prefWidth="44.0" text="Back" />
-            <Button fx:id="btnA" layoutX="24.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="A" />
-            <Button fx:id="btnS" layoutX="56.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="S" />
-            <Button fx:id="btnD" layoutX="88.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="D" />
-            <Button fx:id="btnF" layoutX="120.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="F" />
-            <Button fx:id="btnG" layoutX="152.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="G" />
-            <Button fx:id="btnH" layoutX="184.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="H" />
-            <Button fx:id="btnJ" layoutX="216.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="J" />
-            <Button fx:id="btnK" layoutX="248.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="K" />
-            <Button fx:id="btnL" layoutX="280.0" layoutY="475.0" prefHeight="45.0" prefWidth="32.0" text="L" />
-            <Button fx:id="btnQ" layoutX="6.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="Q" />
-            <Button fx:id="btnW" layoutX="38.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="W" />
-            <Button fx:id="btnE" layoutX="70.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="E" />
-            <Button fx:id="btnR" layoutX="102.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="R" />
-            <Button fx:id="btnT" layoutX="134.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="T" />
-            <Button fx:id="btnY" layoutX="166.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="Y" />
-            <Button fx:id="btnU" layoutX="198.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="U" />
-            <Button fx:id="btnI" layoutX="230.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="I" />
-            <Button fx:id="btnO" layoutX="262.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="O" />
-            <Button fx:id="btnP" layoutX="294.0" layoutY="430.0" prefHeight="45.0" prefWidth="32.0" text="P" />
-         <ToolBar layoutX="11.0" layoutY="14.0" prefHeight="60.0" prefWidth="309.0">
-            <items>
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-            </items>
-         </ToolBar>
-         <ToolBar layoutX="13.0" layoutY="82.0" prefHeight="60.0" prefWidth="309.0">
-            <items>
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-            </items>
-         </ToolBar>
-         <ToolBar layoutX="13.0" layoutY="150.0" prefHeight="60.0" prefWidth="309.0">
-            <items>
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-            </items>
-         </ToolBar>
-         <ToolBar layoutX="11.0" layoutY="222.0" prefHeight="60.0" prefWidth="309.0">
-            <items>
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-            </items>
-         </ToolBar>
-         <ToolBar layoutX="11.0" layoutY="291.0" prefHeight="60.0" prefWidth="309.0">
-            <items>
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-            </items>
-         </ToolBar>
-         <ToolBar layoutX="11.0" layoutY="359.0" prefHeight="60.0" prefWidth="309.0">
-            <items>
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-               <Label prefHeight="51.0" prefWidth="56.0" text="Label" />
-            </items>
-         </ToolBar>
-            
+            <!-- GridPane for Guessing Tiles -->
+            <GridPane hgap="10" layoutX="23.0" layoutY="14.0" vgap="10">
+                <Label fx:id="tile1" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: #000000; -fx-alignment: center; -fx-font-size: 20;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="tile2" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label fx:id="tile3" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Label fx:id="tile4" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Label fx:id="tile5" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <!-- Additional rows for guesses -->
+                <Label fx:id="tile6" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="tile7" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="tile8" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label fx:id="tile9" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Label fx:id="tile10" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+                <!-- Add more rows as needed -->
+            </GridPane>
+         <GridPane hgap="10" layoutX="23.0" layoutY="124.0" vgap="10">
+            <children>
+               <Label fx:id="tile11" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+               <Label fx:id="tile21" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="0" />
+               <Label fx:id="tile31" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="0" />
+               <Label fx:id="tile41" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="0" />
+               <Label fx:id="tile51" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="0" />
+               <Label fx:id="tile61" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+               <Label fx:id="tile71" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label fx:id="tile81" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label fx:id="tile91" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               <Label fx:id="tile101" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            </children>
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+         </GridPane>
+         <GridPane hgap="10" layoutX="23.0" layoutY="234.0" vgap="10">
+            <children>
+               <Label fx:id="tile111" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+               <Label fx:id="tile211" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="0" />
+               <Label fx:id="tile311" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="0" />
+               <Label fx:id="tile411" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="0" />
+               <Label fx:id="tile511" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="0" />
+               <Label fx:id="tile611" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+               <Label fx:id="tile711" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label fx:id="tile811" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label fx:id="tile911" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               <Label fx:id="tile1011" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            </children>
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+         </GridPane>
+
+            <!-- Existing Buttons Layout -->
+            <Button fx:id="btnEnter" layoutX="11.0" layoutY="436.0" onAction="#onHelloButtonClick" prefHeight="45.0" prefWidth="44.0" text="Enter" />
+            <Button fx:id="btnZ" layoutX="55.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="Z" />
+            <Button fx:id="btnX1" layoutX="87.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="X" />
+            <Button fx:id="btnC" layoutX="119.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="C" />
+            <Button fx:id="btnV" layoutX="151.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="V" />
+            <Button fx:id="btnB" layoutX="183.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="B" />
+            <Button fx:id="btnN" layoutX="215.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="N" />
+            <Button fx:id="btnM" layoutX="247.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="M" />
+            <Button fx:id="btnBack" layoutX="279.0" layoutY="436.0" prefHeight="45.0" prefWidth="44.0" text="Back" />
+            <Button fx:id="btnA" layoutX="25.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="A" />
+            <Button fx:id="btnS" layoutX="57.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="S" />
+            <Button fx:id="btnD" layoutX="89.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="D" />
+            <Button fx:id="btnF" layoutX="121.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="F" />
+            <Button fx:id="btnG" layoutX="153.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="G" />
+            <Button fx:id="btnH" layoutX="185.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="H" />
+            <Button fx:id="btnJ" layoutX="217.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="J" />
+            <Button fx:id="btnK" layoutX="249.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="K" />
+            <Button fx:id="btnL" layoutX="281.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="L" />
+            <Button fx:id="btnQ" layoutX="7.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="Q" />
+            <Button fx:id="btnW" layoutX="39.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="W" />
+            <Button fx:id="btnE" layoutX="71.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="E" />
+            <Button fx:id="btnR" layoutX="103.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="R" />
+            <Button fx:id="btnT" layoutX="135.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="T" />
+            <Button fx:id="btnY" layoutX="167.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="Y" />
+            <Button fx:id="btnU" layoutX="199.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="U" />
+            <Button fx:id="btnI" layoutX="231.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="I" />
+            <Button fx:id="btnO" layoutX="263.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="O" />
+            <Button fx:id="btnP" layoutX="295.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="P" />
         </children>
     </AnchorPane>
 </VBox>
