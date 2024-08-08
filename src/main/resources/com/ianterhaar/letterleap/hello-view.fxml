@@ -15,85 +15,56 @@
     </padding>
     <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="334.0" VBox.vgrow="ALWAYS">
         <children>
-            <!-- GridPane for Guessing Tiles -->
             <GridPane hgap="10" layoutX="23.0" layoutY="14.0" vgap="10">
+                <!-- First row of tiles -->
                 <Label fx:id="tile1" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: #000000; -fx-alignment: center; -fx-font-size: 20;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                 <Label fx:id="tile2" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="0" />
                 <Label fx:id="tile3" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="0" />
                 <Label fx:id="tile4" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="0" />
                 <Label fx:id="tile5" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="0" />
-                <!-- Additional rows for guesses -->
+                <!-- Second row of tiles -->
                 <Label fx:id="tile6" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="1" />
                 <Label fx:id="tile7" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Label fx:id="tile8" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
                 <Label fx:id="tile9" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1" />
                 <Label fx:id="tile10" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <columnConstraints>
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-            </rowConstraints>
-                <!-- Add more rows as needed -->
+                <!-- Third row of tiles -->
+                <Label fx:id="tile11" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="tile21" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="tile31" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label fx:id="tile41" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Label fx:id="tile51" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <!-- Fourth row of tiles -->
+                <Label fx:id="tile61" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="tile71" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="tile81" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Label fx:id="tile91" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Label fx:id="tile101" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <!-- Fifth row of tiles -->
+                <Label fx:id="tile111" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="tile211" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="tile311" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Label fx:id="tile411" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Label fx:id="tile511" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <!-- Sixth row of tiles -->
+                <Label fx:id="tile611" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label fx:id="tile711" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label fx:id="tile811" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Label fx:id="tile911" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Label fx:id="tile1011" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
             </GridPane>
-         <GridPane hgap="10" layoutX="23.0" layoutY="124.0" vgap="10">
-            <children>
-               <Label fx:id="tile11" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="0" />
-               <Label fx:id="tile21" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="0" />
-               <Label fx:id="tile31" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="0" />
-               <Label fx:id="tile41" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="0" />
-               <Label fx:id="tile51" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="0" />
-               <Label fx:id="tile61" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="1" />
-               <Label fx:id="tile71" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label fx:id="tile81" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label fx:id="tile91" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1" />
-               <Label fx:id="tile101" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            </children>
-            <columnConstraints>
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-            </rowConstraints>
-         </GridPane>
-         <GridPane hgap="10" layoutX="23.0" layoutY="234.0" vgap="10">
-            <children>
-               <Label fx:id="tile111" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="0" />
-               <Label fx:id="tile211" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="0" />
-               <Label fx:id="tile311" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="0" />
-               <Label fx:id="tile411" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="0" />
-               <Label fx:id="tile511" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="0" />
-               <Label fx:id="tile611" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="1" />
-               <Label fx:id="tile711" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label fx:id="tile811" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label fx:id="tile911" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="1" />
-               <Label fx:id="tile1011" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            </children>
-            <columnConstraints>
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-            </rowConstraints>
-         </GridPane>
 
             <!-- Existing Buttons Layout -->
             <Button fx:id="btnEnter" layoutX="11.0" layoutY="436.0" onAction="#onHelloButtonClick" prefHeight="45.0" prefWidth="44.0" text="Enter" />
