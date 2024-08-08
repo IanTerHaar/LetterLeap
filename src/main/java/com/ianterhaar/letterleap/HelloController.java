@@ -1,10 +1,11 @@
 package com.ianterhaar.letterleap;
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.event.ActionEvent;
-import javafx.application.Platform;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,6 +69,18 @@ public class HelloController {
     }
 
     @FXML
+    private void backButton() {
+
+        if (currentColumn > 0) {
+            currentColumn--; // Move to the previous column
+        } else if (currentRow > 0) {
+            currentRow--; // Move to the previous row if at the beginning of a row
+            currentColumn = columns - 1; // Move to the last column of the previous row
+        }
+        removeLetterFromTile();
+    }
+
+    @FXML
     private void onButtonClick(ActionEvent event) {
         Button source = (Button) event.getSource();
         String letter = source.getText();
@@ -85,6 +98,15 @@ public class HelloController {
         if (currentTile != null) {
             currentTile.setText(letter);
             System.out.println("Added letter " + letter + " to tile: " + currentTile.getId());
+        }
+    }
+
+    private void removeLetterFromTile() {
+
+        Label currentTile = getCurrentTile();
+        if (currentTile != null) {
+            currentTile.setText("");
+            System.out.println("Removed letter from current tile: " + currentTile.getId());
         }
     }
 

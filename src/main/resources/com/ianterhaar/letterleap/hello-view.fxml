@@ -63,6 +63,10 @@
                 <rowConstraints>
                     <RowConstraints />
                     <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
                 </rowConstraints>
             </GridPane>
 
@@ -75,7 +79,7 @@
             <Button fx:id="btnB" layoutX="183.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="B" />
             <Button fx:id="btnN" layoutX="215.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="N" />
             <Button fx:id="btnM" layoutX="247.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="M" />
-            <Button fx:id="btnBack" layoutX="279.0" layoutY="436.0" prefHeight="45.0" prefWidth="44.0" text="Back" />
+            <Button fx:id="btnBack" layoutX="279.0" layoutY="436.0" onAction="#backButton" prefHeight="45.0" prefWidth="44.0" text="Back" />
             <Button fx:id="btnA" layoutX="25.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="A" />
             <Button fx:id="btnS" layoutX="57.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="S" />
             <Button fx:id="btnD" layoutX="89.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="D" />
