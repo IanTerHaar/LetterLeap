@@ -4,6 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
+import javafx.application.Platform;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HelloController {
     @FXML
@@ -24,11 +27,26 @@ public class HelloController {
             btnS, btnD, btnF, btnG, btnH, btnJ, btnK, btnL, btnQ, btnW, btnE, btnR,
             btnT, btnY, btnU, btnI, btnO, btnP;
 
+    private List<Label> tiles;
     private int currentRow = 0;
     private int currentColumn = 0;
+    private final int columns = 5;
 
     // Example word to guess
     private String wordToGuess = "HELLO";
+
+    @FXML
+    private void initialize() {
+        Platform.runLater(() -> {
+            tiles = new ArrayList<>();
+            tiles.add(tile1); tiles.add(tile2); tiles.add(tile3); tiles.add(tile4); tiles.add(tile5);
+            tiles.add(tile6); tiles.add(tile7); tiles.add(tile8); tiles.add(tile9); tiles.add(tile10);
+            tiles.add(tile11); tiles.add(tile21); tiles.add(tile31); tiles.add(tile41); tiles.add(tile51);
+            tiles.add(tile61); tiles.add(tile71); tiles.add(tile81); tiles.add(tile91); tiles.add(tile101);
+            tiles.add(tile111); tiles.add(tile211); tiles.add(tile311); tiles.add(tile411); tiles.add(tile511);
+            tiles.add(tile611); tiles.add(tile711); tiles.add(tile811); tiles.add(tile911); tiles.add(tile1011);
+        });
+    }
 
     @FXML
     private void onHelloButtonClick() {
@@ -40,14 +58,15 @@ public class HelloController {
         System.out.println("Current Guess: " + guess);
 
         checkGuess(guess);
-        currentRow++; // Increment the row after checking the guess
-        currentColumn = 0; // Reset the column after checking the guess
+
+        // Move to next row after checking the guess
+        currentRow++;
+        currentColumn = 0;
 
         System.out.println("Row after increment: " + currentRow);
         System.out.println("Column after reset: " + currentColumn);
     }
 
-    // Method to handle button clicks
     @FXML
     private void onButtonClick(ActionEvent event) {
         Button source = (Button) event.getSource();
@@ -61,7 +80,6 @@ public class HelloController {
         moveToNextTile();
     }
 
-    // Method to add a letter to the current tile
     private void addLetterToTile(String letter) {
         Label currentTile = getCurrentTile();
         if (currentTile != null) {
@@ -70,42 +88,46 @@ public class HelloController {
         }
     }
 
-    // Method to get the current tile
     private Label getCurrentTile() {
-        String tileId = "tile" + ((currentRow * 5) + currentColumn + 1);
-        System.out.println("Current Tile ID: " + tileId);
-        return (Label) btnEnter.getScene().lookup("#" + tileId);
+        int tileIndex = currentRow * columns + currentColumn;
+        if (tileIndex < tiles.size()) {
+            return tiles.get(tileIndex);
+        }
+        return null;
     }
 
-    // Method to move to the next tile
     private void moveToNextTile() {
         currentColumn++;
-        if (currentColumn >= 5) {
+        if (currentColumn >= columns) {
             currentColumn = 0;
         }
-        System.out.println("Moved to next tile. Current Column: " + currentColumn);
+        System.out.println("Moved to next tile. Current Row: " + currentRow + ", Current Column: " + currentColumn);
     }
 
-    // Method to get the current guess
     private String getCurrentGuess() {
         StringBuilder guess = new StringBuilder();
-        for (int i = 0; i < 5; i++) {
-            Label tile = (Label) btnEnter.getScene().lookup("#tile" + (currentRow * 5 + i + 1));
-            guess.append(tile.getText());
+        for (int i = 0; i < columns; i++) {
+            int tileIndex = currentRow * columns + i;
+            if (tileIndex < tiles.size()) {
+                Label tile = tiles.get(tileIndex);
+                guess.append(tile.getText());
+            }
         }
         return guess.toString();
     }
 
-    // Method to check the guess
     private void checkGuess(String guess) {
         for (int i = 0; i < guess.length(); i++) {
-            Label tile = (Label) btnEnter.getScene().lookup("#tile" + (currentRow * 5 + i + 1));
-            if (guess.charAt(i) == wordToGuess.charAt(i)) {
-                tile.setStyle("-fx-background-color: green;");
-            } else if (wordToGuess.contains(String.valueOf(guess.charAt(i)))) {
-                tile.setStyle("-fx-background-color: yellow;");
-            } else {
-                tile.setStyle("-fx-background-color: gray;");
+            int tileIndex = currentRow * columns + i;
+            if (tileIndex < tiles.size()) {
+                Label tile = tiles.get(tileIndex);
+                if (guess.charAt(i) == wordToGuess.charAt(i)) {
+                    tile.setStyle("-fx-background-color: green;");
+                } else if (wordToGuess.contains(String.valueOf(guess.charAt(i)))) {
+                    tile.setStyle("-fx-background-color: yellow;");
+                } else {
+                    tile.setStyle("-fx-background-color: gray;");
+                }
             }
         }
     }
