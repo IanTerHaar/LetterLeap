@@ -20,7 +20,9 @@ public class HelloController {
     private Label tile611, tile711, tile811, tile911, tile1011;
 
     @FXML
-    private Button btnEnter, btnZ, btnX1, btnC, btnV, btnB, btnN, btnM, btnBack, btnA, btnS, btnD, btnF, btnG, btnH, btnJ, btnK, btnL, btnQ, btnW, btnE, btnR, btnT, btnY, btnU, btnI, btnO, btnP;
+    private Button btnEnter, btnZ, btnX1, btnC, btnV, btnB, btnN, btnM, btnBack, btnA,
+            btnS, btnD, btnF, btnG, btnH, btnJ, btnK, btnL, btnQ, btnW, btnE, btnR,
+            btnT, btnY, btnU, btnI, btnO, btnP;
 
     private int currentRow = 0;
     private int currentColumn = 0;
@@ -31,8 +33,18 @@ public class HelloController {
     @FXML
     private void onHelloButtonClick() {
         System.out.println("Enter Button Clicked!");
+        System.out.println("Current Row: " + currentRow);
+        System.out.println("Current Column: " + currentColumn);
+
         String guess = getCurrentGuess();
+        System.out.println("Current Guess: " + guess);
+
         checkGuess(guess);
+        currentRow++; // Increment the row after checking the guess
+        currentColumn = 0; // Reset the column after checking the guess
+
+        System.out.println("Row after increment: " + currentRow);
+        System.out.println("Column after reset: " + currentColumn);
     }
 
     // Method to handle button clicks
@@ -40,6 +52,7 @@ public class HelloController {
     private void onButtonClick(ActionEvent event) {
         Button source = (Button) event.getSource();
         String letter = source.getText();
+        System.out.println("Button Clicked: " + letter);
 
         // Add letter to current tile
         addLetterToTile(letter);
@@ -53,12 +66,14 @@ public class HelloController {
         Label currentTile = getCurrentTile();
         if (currentTile != null) {
             currentTile.setText(letter);
+            System.out.println("Added letter " + letter + " to tile: " + currentTile.getId());
         }
     }
 
     // Method to get the current tile
     private Label getCurrentTile() {
-        String tileId = "tile" + (currentRow * 5 + currentColumn + 1);
+        String tileId = "tile" + ((currentRow * 5) + currentColumn + 1);
+        System.out.println("Current Tile ID: " + tileId);
         return (Label) btnEnter.getScene().lookup("#" + tileId);
     }
 
@@ -67,8 +82,8 @@ public class HelloController {
         currentColumn++;
         if (currentColumn >= 5) {
             currentColumn = 0;
-            currentRow++;
         }
+        System.out.println("Moved to next tile. Current Column: " + currentColumn);
     }
 
     // Method to get the current guess
@@ -94,6 +109,4 @@ public class HelloController {
             }
         }
     }
-
-    
 }
