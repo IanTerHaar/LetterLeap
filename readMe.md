@@ -1,6 +1,6 @@
 # LetterLeap
 
-LetterLeap is a word puzzle game inspired by the popular "Wordle" game. It allows players to guess 4-letter, 5-letter, and 6-letter words with feedback provided for each guess.
+LetterLeap is a word puzzle game inspired by the popular "Wordle" game.
 
 ## Table of Contents
 - [Features](#features)
