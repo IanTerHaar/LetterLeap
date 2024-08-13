@@ -3,8 +3,13 @@ package com.ianterhaar.letterleap;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +27,8 @@ public class HelloController {
     private Label tile111, tile211, tile311, tile411, tile511;
     @FXML
     private Label tile611, tile711, tile811, tile911, tile1011;
+    @FXML
+    private Label lblCorrectGuess;
 
     @FXML
     private Button btnEnter, btnZ, btnX1, btnC, btnV, btnB, btnN, btnM, btnBack, btnA,
@@ -66,6 +73,11 @@ public class HelloController {
 
         System.out.println("Row after increment: " + currentRow);
         System.out.println("Column after reset: " + currentColumn);
+
+        if (isCorrectGuess()) {
+
+            changeCorrectGuessLabel();
+        }
     }
 
     @FXML
@@ -145,7 +157,20 @@ public class HelloController {
         return guess.toString();
     }
 
+    private boolean isCorrectGuess() {
 
+        return wordToGuess.equals(getCurrentGuess());
+    }
+
+    private void changeCorrectGuessLabel(){
+
+        lblCorrectGuess.setOpacity(1);
+        String hexColor = "#008000";
+        Color color = Color.web(hexColor);
+        CornerRadii cornerRadii = new CornerRadii(7);
+        BackgroundFill backgroundFill = new BackgroundFill(color, cornerRadii, Insets.EMPTY);
+        lblCorrectGuess.setBackground(new Background(backgroundFill));
+    }
 
     private void checkGuess(String guess) {
         for (int i = 0; i < guess.length(); i++) {

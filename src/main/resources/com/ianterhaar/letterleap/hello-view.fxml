@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="373.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ianterhaar.letterleap.HelloController">
     <padding>
@@ -35,19 +36,19 @@
                 <Label fx:id="tile41" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="2" />
                 <Label fx:id="tile51" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="2" />
                 <!-- Fourth row of tiles -->
-                <Label fx:id="tile61" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="tile61" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.rowIndex="3" />
                 <Label fx:id="tile71" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="3" />
                 <Label fx:id="tile81" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="3" />
                 <Label fx:id="tile91" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="3" />
                 <Label fx:id="tile101" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="3" />
                 <!-- Fifth row of tiles -->
-                <Label fx:id="tile111" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="tile111" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.rowIndex="4" />
                 <Label fx:id="tile211" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="4" />
                 <Label fx:id="tile311" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="4" />
                 <Label fx:id="tile411" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="4" />
                 <Label fx:id="tile511" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="4" GridPane.rowIndex="4" />
                 <!-- Sixth row of tiles -->
-                <Label fx:id="tile611" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label fx:id="tile611" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.rowIndex="5" />
                 <Label fx:id="tile711" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="1" GridPane.rowIndex="5" />
                 <Label fx:id="tile811" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="2" GridPane.rowIndex="5" />
                 <Label fx:id="tile911" prefHeight="45.0" prefWidth="48.0" style="-fx-border-color: black; -fx-alignment: center; -fx-font-size: 20;" text=" " GridPane.columnIndex="3" GridPane.rowIndex="5" />
@@ -99,6 +100,11 @@
             <Button fx:id="btnI" layoutX="231.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="I" />
             <Button fx:id="btnO" layoutX="263.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="O" />
             <Button fx:id="btnP" layoutX="295.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="P" />
+         <Label fx:id="lblCorrectGuess" layoutX="36.0" layoutY="162.0" opacity="0.0" text="Word guessed correctly!" textFill="WHITE">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
         </children>
     </AnchorPane>
 </VBox>
