@@ -17,10 +17,8 @@ LetterLeap is a word puzzle game inspired by the popular "Wordle" game.
 
 ## Screenshots
 
-<p align="center">
-  <img src="./com/ianterhaar/letterleap/images/letterleap empty.png" alt="When started" width="300" />
-  <img src="./com/ianterhaar/letterleap/images/letterleap done.png" alt="When done" width="300" />
-</p>
+![When started](./com/ianterhaar/letterleap/images/letterleap empty.png)
+![When started](./com/ianterhaar/letterleap/images/letterleap done.png)
 
 ## Installation
 
