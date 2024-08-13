@@ -15,11 +15,6 @@ LetterLeap is a word puzzle game inspired by the popular "Wordle" game.
 - Feedback for each guess to indicate correct letters and positions
 - Intuitive and user-friendly interface built with JavaFX
 
-## Screenshots
-
-![When started](./com/ianterhaar/letterleap/images/letterleap empty.png)
-![When started](./com/ianterhaar/letterleap/images/letterleap done.png)
-
 ## Installation
 
 1. Clone the repository:
