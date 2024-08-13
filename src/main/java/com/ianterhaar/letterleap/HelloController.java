@@ -11,8 +11,13 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class HelloController {
     @FXML
@@ -41,10 +46,46 @@ public class HelloController {
     private final int columns = 5;
 
     // Example word to guess
-    private String wordToGuess = "HELLO";
+    private String wordToGuess;
+
+    private List<String> loadWordsFromFile() {
+        List<String> words = new ArrayList<>();
+
+        InputStream inputStream = getClass().getResourceAsStream("/com/ianterhaar/letterleap/data/5letters.txt");
+
+        if (inputStream == null) {
+            System.out.println("File not found! Check the path and file location.");
+        } else {
+            System.out.println("File loaded successfully.");
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    words.add(line.trim().toUpperCase());  // Assuming words are in lowercase, convert them to uppercase
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return words;
+    }
+
+
+    private void selectRandomWord() {
+        List<String> words = loadWordsFromFile();
+        if (!words.isEmpty()) {
+            Random random = new Random();
+            wordToGuess = words.get(random.nextInt(words.size()));
+            System.out.println("Word to Guess: " + wordToGuess); // For debugging purposes
+        } else {
+            System.out.println("Word list is empty or not loaded!");
+        }
+    }
 
     @FXML
     private void initialize() {
+
+
         Platform.runLater(() -> {
             tiles = new ArrayList<>();
             tiles.add(tile1); tiles.add(tile2); tiles.add(tile3); tiles.add(tile4); tiles.add(tile5);
@@ -53,6 +94,8 @@ public class HelloController {
             tiles.add(tile61); tiles.add(tile71); tiles.add(tile81); tiles.add(tile91); tiles.add(tile101);
             tiles.add(tile111); tiles.add(tile211); tiles.add(tile311); tiles.add(tile411); tiles.add(tile511);
             tiles.add(tile611); tiles.add(tile711); tiles.add(tile811); tiles.add(tile911); tiles.add(tile1011);
+            selectRandomWord();
+
         });
     }
 
@@ -77,6 +120,7 @@ public class HelloController {
         if (isCorrectGuess()) {
 
             changeCorrectGuessLabel();
+            disableButtons();
         }
     }
 
@@ -171,6 +215,38 @@ public class HelloController {
         BackgroundFill backgroundFill = new BackgroundFill(color, cornerRadii, Insets.EMPTY);
         lblCorrectGuess.setBackground(new Background(backgroundFill));
     }
+
+    private void disableButtons() {
+        btnEnter.setDisable(true);
+        btnZ.setDisable(true);
+        btnX1.setDisable(true);
+        btnC.setDisable(true);
+        btnV.setDisable(true);
+        btnB.setDisable(true);
+        btnN.setDisable(true);
+        btnM.setDisable(true);
+        btnBack.setDisable(true);
+        btnA.setDisable(true);
+        btnS.setDisable(true);
+        btnD.setDisable(true);
+        btnF.setDisable(true);
+        btnG.setDisable(true);
+        btnH.setDisable(true);
+        btnJ.setDisable(true);
+        btnK.setDisable(true);
+        btnL.setDisable(true);
+        btnQ.setDisable(true);
+        btnW.setDisable(true);
+        btnE.setDisable(true);
+        btnR.setDisable(true);
+        btnT.setDisable(true);
+        btnY.setDisable(true);
+        btnU.setDisable(true);
+        btnI.setDisable(true);
+        btnO.setDisable(true);
+        btnP.setDisable(true);
+    }
+
 
     private void checkGuess(String guess) {
         for (int i = 0; i < guess.length(); i++) {
