@@ -12,7 +12,6 @@ LetterLeap is a word puzzle game inspired by the popular "Wordle" game. It allow
 
 ## Features
 
-- Three game modes: 4-letter, 5-letter, and 6-letter words
 - Feedback for each guess to indicate correct letters and positions
 - Intuitive and user-friendly interface built with JavaFX
 
