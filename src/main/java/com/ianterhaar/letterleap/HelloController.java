@@ -61,7 +61,7 @@ public class HelloController {
         checkGuess(guess);
 
         // Move to next row after checking the guess
-        currentRow++;
+//        currentRow++;
         currentColumn = 0;
 
         System.out.println("Row after increment: " + currentRow);
@@ -71,13 +71,19 @@ public class HelloController {
     @FXML
     private void backButton() {
 
-        if (currentColumn > 0) {
-            currentColumn--; // Move to the previous column
-        } else if (currentRow > 0) {
-            currentRow--; // Move to the previous row if at the beginning of a row
-            currentColumn = columns - 1; // Move to the last column of the previous row
+        if (currentColumn == 0 && currentRow > 0) {
+            currentRow--;
+            currentColumn = columns - 1;
+        } else if (currentColumn > 0) {
+            currentColumn--;
         }
-        removeLetterFromTile();
+
+        // Remove the letter from the current tile
+        Label currentTile = getCurrentTile();
+        if (currentTile != null && !currentTile.getText().isEmpty()) {
+            currentTile.setText("");
+            System.out.println("Removed letter from tile: " + currentTile.getId());
+        }
     }
 
     @FXML
@@ -122,6 +128,7 @@ public class HelloController {
         currentColumn++;
         if (currentColumn >= columns) {
             currentColumn = 0;
+            currentRow++;
         }
         System.out.println("Moved to next tile. Current Row: " + currentRow + ", Current Column: " + currentColumn);
     }
@@ -129,7 +136,7 @@ public class HelloController {
     private String getCurrentGuess() {
         StringBuilder guess = new StringBuilder();
         for (int i = 0; i < columns; i++) {
-            int tileIndex = currentRow * columns + i;
+            int tileIndex = currentRow * columns + i -5;
             if (tileIndex < tiles.size()) {
                 Label tile = tiles.get(tileIndex);
                 guess.append(tile.getText());
@@ -138,9 +145,11 @@ public class HelloController {
         return guess.toString();
     }
 
+
+
     private void checkGuess(String guess) {
         for (int i = 0; i < guess.length(); i++) {
-            int tileIndex = currentRow * columns + i;
+            int tileIndex = currentRow * columns + i -5;
             if (tileIndex < tiles.size()) {
                 Label tile = tiles.get(tileIndex);
                 if (guess.charAt(i) == wordToGuess.charAt(i)) {
