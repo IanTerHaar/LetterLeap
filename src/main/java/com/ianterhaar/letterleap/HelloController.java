@@ -88,12 +88,36 @@ public class HelloController {
 
         Platform.runLater(() -> {
             tiles = new ArrayList<>();
-            tiles.add(tile1); tiles.add(tile2); tiles.add(tile3); tiles.add(tile4); tiles.add(tile5);
-            tiles.add(tile6); tiles.add(tile7); tiles.add(tile8); tiles.add(tile9); tiles.add(tile10);
-            tiles.add(tile11); tiles.add(tile21); tiles.add(tile31); tiles.add(tile41); tiles.add(tile51);
-            tiles.add(tile61); tiles.add(tile71); tiles.add(tile81); tiles.add(tile91); tiles.add(tile101);
-            tiles.add(tile111); tiles.add(tile211); tiles.add(tile311); tiles.add(tile411); tiles.add(tile511);
-            tiles.add(tile611); tiles.add(tile711); tiles.add(tile811); tiles.add(tile911); tiles.add(tile1011);
+            tiles.add(tile1);
+            tiles.add(tile2);
+            tiles.add(tile3);
+            tiles.add(tile4);
+            tiles.add(tile5);
+            tiles.add(tile6);
+            tiles.add(tile7);
+            tiles.add(tile8);
+            tiles.add(tile9);
+            tiles.add(tile10);
+            tiles.add(tile11);
+            tiles.add(tile21);
+            tiles.add(tile31);
+            tiles.add(tile41);
+            tiles.add(tile51);
+            tiles.add(tile61);
+            tiles.add(tile71);
+            tiles.add(tile81);
+            tiles.add(tile91);
+            tiles.add(tile101);
+            tiles.add(tile111);
+            tiles.add(tile211);
+            tiles.add(tile311);
+            tiles.add(tile411);
+            tiles.add(tile511);
+            tiles.add(tile611);
+            tiles.add(tile711);
+            tiles.add(tile811);
+            tiles.add(tile911);
+            tiles.add(tile1011);
             selectRandomWord();
 
         });
@@ -192,7 +216,7 @@ public class HelloController {
     private String getCurrentGuess() {
         StringBuilder guess = new StringBuilder();
         for (int i = 0; i < columns; i++) {
-            int tileIndex = currentRow * columns + i -5;
+            int tileIndex = currentRow * columns + i - 5;
             if (tileIndex < tiles.size()) {
                 Label tile = tiles.get(tileIndex);
                 guess.append(tile.getText());
@@ -206,7 +230,7 @@ public class HelloController {
         return wordToGuess.equals(getCurrentGuess());
     }
 
-    private void changeCorrectGuessLabel(){
+    private void changeCorrectGuessLabel() {
 
         lblCorrectGuess.setOpacity(1);
         String hexColor = "#008000";
@@ -250,17 +274,23 @@ public class HelloController {
 
     private void checkGuess(String guess) {
         for (int i = 0; i < guess.length(); i++) {
-            int tileIndex = currentRow * columns + i -5;
+            int tileIndex = currentRow * columns + i - 5;
             if (tileIndex < tiles.size()) {
                 Label tile = tiles.get(tileIndex);
+
+                // Set the background color based on the guess
                 if (guess.charAt(i) == wordToGuess.charAt(i)) {
-                    tile.setStyle("-fx-background-color: green;");
+                    tile.setStyle("-fx-background-color: green; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
                 } else if (wordToGuess.contains(String.valueOf(guess.charAt(i)))) {
-                    tile.setStyle("-fx-background-color: yellow;");
+                    tile.setStyle("-fx-background-color: #979701; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
                 } else {
-                    tile.setStyle("-fx-background-color: gray;");
+                    tile.setStyle("-fx-background-color: gray; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
                 }
+
+                // Optionally, set text alignment to center in case it's not applied
+                tile.setAlignment(javafx.geometry.Pos.CENTER);
             }
         }
     }
 }
+
