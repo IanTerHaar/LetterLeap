@@ -11,7 +11,6 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,10 +45,12 @@ public class Controller {
     private int currentColumn = 0;
     private final int columns = 5;
 
-    // Example word to guess
     private String wordToGuess;
 
     private List<String> loadWordsFromFile() {
+
+        /* loads file, checks if it exists, print results of successful or unsuccessful file load
+        *  returns words */
         List<String> words = new ArrayList<>();
 
         InputStream inputStream = getClass().getResourceAsStream("/com/ianterhaar/letterleap/data/5letters.txt");
@@ -61,7 +62,7 @@ public class Controller {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    words.add(line.trim().toUpperCase());  // Assuming words are in lowercase, convert them to uppercase
+                    words.add(line.trim().toUpperCase());
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -73,11 +74,13 @@ public class Controller {
 
 
     private void selectRandomWord() {
+
+        // just selects a random word from the words list
         List<String> words = loadWordsFromFile();
         if (!words.isEmpty()) {
             Random random = new Random();
             wordToGuess = words.get(random.nextInt(words.size()));
-            System.out.println("Word to Guess: " + wordToGuess); // For debugging purposes
+            System.out.println("Word to Guess: " + wordToGuess); // debugging
         } else {
             System.out.println("Word list is empty or not loaded!");
         }
@@ -86,7 +89,7 @@ public class Controller {
     @FXML
     private void initialize() {
 
-
+        // uhhh...
         Platform.runLater(() -> {
             tiles = new ArrayList<>();
             tiles.add(tile1);
@@ -120,11 +123,9 @@ public class Controller {
             tiles.add(tile911);
             tiles.add(tile1011);
 
-            // Set the background color of the root VBox
             VBox root = (VBox) lblCorrectGuess.getScene().getRoot();
             root.setStyle("-fx-background-color: #121212;");
 
-            // Optionally, set the default background color for the tiles
             for (Label tile : tiles) {
                 tile.setStyle("-fx-border-color: #383838; -fx-alignment: center; -fx-font-size: 20; -fx-background-color: #121212;");
             }
@@ -137,19 +138,18 @@ public class Controller {
 
     @FXML
     private void onHelloButtonClick() {
+
+        // mostly for debugging
         System.out.println("Enter Button Clicked!");
         System.out.println("Current Row: " + currentRow);
         System.out.println("Current Column: " + currentColumn);
-
         String guess = getCurrentGuess();
         System.out.println("Current Guess: " + guess);
 
         checkGuess(guess);
-
-        // Move to next row after checking the guess
-//        currentRow++;
         currentColumn = 0;
 
+        // more debugging
         System.out.println("Row after increment: " + currentRow);
         System.out.println("Column after reset: " + currentColumn);
 
@@ -163,6 +163,7 @@ public class Controller {
     @FXML
     private void backButton() {
 
+        // some calculation I'm not going to explain in a comment
         if (currentColumn == 0 && currentRow > 0) {
             currentRow--;
             currentColumn = columns - 1;
@@ -170,7 +171,7 @@ public class Controller {
             currentColumn--;
         }
 
-        // Remove the letter from the current tile
+        // remove the letter from the current tile
         Label currentTile = getCurrentTile();
         if (currentTile != null && !currentTile.getText().isEmpty()) {
             currentTile.setText("");
@@ -180,18 +181,20 @@ public class Controller {
 
     @FXML
     private void onButtonClick(ActionEvent event) {
+
+        // obtains the details of pressed button and add it to the "addLetterToTile" procedure
         Button source = (Button) event.getSource();
         String letter = source.getText();
         System.out.println("Button Clicked: " + letter);
 
-        // Add letter to current tile
         addLetterToTile(letter);
 
-        // Move to the next tile
         moveToNextTile();
     }
 
     private void addLetterToTile(String letter) {
+
+        // checks the letter given and add updates the current tile appropriately
         Label currentTile = getCurrentTile();
         if (currentTile != null) {
             currentTile.setText(letter);
@@ -200,16 +203,9 @@ public class Controller {
         }
     }
 
-    private void removeLetterFromTile() {
-
-        Label currentTile = getCurrentTile();
-        if (currentTile != null) {
-            currentTile.setText("");
-            System.out.println("Removed letter from current tile: " + currentTile.getId());
-        }
-    }
-
     private Label getCurrentTile() {
+
+        // calculates the index of the tile and returns it
         int tileIndex = currentRow * columns + currentColumn;
         if (tileIndex < tiles.size()) {
             return tiles.get(tileIndex);
@@ -218,6 +214,8 @@ public class Controller {
     }
 
     private void moveToNextTile() {
+
+        // some fancy calculate to move to the next tile
         currentColumn++;
         if (currentColumn >= columns) {
             currentColumn = 0;
@@ -227,6 +225,8 @@ public class Controller {
     }
 
     private String getCurrentGuess() {
+
+        // calculates the current guess by checking previously added letters and returns the guess
         StringBuilder guess = new StringBuilder();
         for (int i = 0; i < columns; i++) {
             int tileIndex = currentRow * columns + i - 5;
@@ -240,11 +240,13 @@ public class Controller {
 
     private boolean isCorrectGuess() {
 
+        // no need to explain...
         return wordToGuess.equals(getCurrentGuess());
     }
 
     private void changeCorrectGuessLabel() {
 
+        // code to handle the correct guess label
         lblCorrectGuess.setOpacity(1);
         String hexColor = "#008000";
         Color color = Color.web(hexColor);
@@ -254,6 +256,8 @@ public class Controller {
     }
 
     private void disableButtons() {
+
+        // the name of this procedure gives it away...
         btnEnter.setDisable(true);
         btnZ.setDisable(true);
         btnX1.setDisable(true);
@@ -286,12 +290,13 @@ public class Controller {
 
 
     private void checkGuess(String guess) {
+
         for (int i = 0; i < guess.length(); i++) {
             int tileIndex = currentRow * columns + i - 5;
             if (tileIndex < tiles.size()) {
                 Label tile = tiles.get(tileIndex);
 
-                // Set the background color based on the guess
+                // set the background color based on the guess
                 if (guess.charAt(i) == wordToGuess.charAt(i)) {
                     tile.setStyle("-fx-background-color: #528d4d; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
                 } else if (wordToGuess.contains(String.valueOf(guess.charAt(i)))) {
@@ -300,10 +305,8 @@ public class Controller {
                     tile.setStyle("-fx-background-color: #3a3a3c; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
                 }
 
-                // Ensure the text color remains white
                 tile.setTextFill(Color.WHITE);
 
-                // Optionally, set text alignment to center in case it's not applied
                 tile.setAlignment(javafx.geometry.Pos.CENTER);
             }
         }
