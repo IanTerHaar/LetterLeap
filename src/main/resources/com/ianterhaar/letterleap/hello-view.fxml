@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="373.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ianterhaar.letterleap.HelloController">
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="373.0" spacing="20.0" style="-fx-background-color: #F0F0F0;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ianterhaar.letterleap.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -72,35 +72,44 @@
             </GridPane>
 
             <!-- Existing Buttons Layout -->
-            <Button fx:id="btnEnter" layoutX="11.0" layoutY="436.0" onAction="#onHelloButtonClick" prefHeight="45.0" prefWidth="44.0" text="Enter" />
-            <Button fx:id="btnZ" layoutX="55.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="Z" />
-            <Button fx:id="btnX1" layoutX="87.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="X" />
-            <Button fx:id="btnC" layoutX="119.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="C" />
-            <Button fx:id="btnV" layoutX="151.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="V" />
-            <Button fx:id="btnB" layoutX="183.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="B" />
-            <Button fx:id="btnN" layoutX="215.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="N" />
-            <Button fx:id="btnM" layoutX="247.0" layoutY="436.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="M" />
-            <Button fx:id="btnBack" layoutX="279.0" layoutY="436.0" onAction="#backButton" prefHeight="45.0" prefWidth="44.0" text="Back" />
-            <Button fx:id="btnA" layoutX="25.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="A" />
-            <Button fx:id="btnS" layoutX="57.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="S" />
-            <Button fx:id="btnD" layoutX="89.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="D" />
-            <Button fx:id="btnF" layoutX="121.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="F" />
-            <Button fx:id="btnG" layoutX="153.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="G" />
-            <Button fx:id="btnH" layoutX="185.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="H" />
-            <Button fx:id="btnJ" layoutX="217.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="J" />
-            <Button fx:id="btnK" layoutX="249.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="K" />
-            <Button fx:id="btnL" layoutX="281.0" layoutY="391.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="L" />
-            <Button fx:id="btnQ" layoutX="7.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="Q" />
-            <Button fx:id="btnW" layoutX="39.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="W" />
-            <Button fx:id="btnE" layoutX="71.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="E" />
-            <Button fx:id="btnR" layoutX="103.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="R" />
-            <Button fx:id="btnT" layoutX="135.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="T" />
-            <Button fx:id="btnY" layoutX="167.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="Y" />
-            <Button fx:id="btnU" layoutX="199.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="U" />
-            <Button fx:id="btnI" layoutX="231.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="I" />
-            <Button fx:id="btnO" layoutX="263.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="O" />
-            <Button fx:id="btnP" layoutX="295.0" layoutY="346.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="32.0" text="P" />
-         <Label fx:id="lblCorrectGuess" layoutX="36.0" layoutY="162.0" opacity="0.0" text="Word guessed correctly!" textFill="WHITE">
+            <Button fx:id="btnEnter" layoutX="6.0" layoutY="442.0" onAction="#onHelloButtonClick" prefHeight="45.0" prefWidth="46.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="Enter" />
+            <Button fx:id="btnZ" layoutX="56.0" layoutY="442.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="Z" />
+            <Button fx:id="btnX1" layoutX="88.0" layoutY="442.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="X" />
+            <Button fx:id="btnC" layoutX="120.0" layoutY="442.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="C" />
+            <Button fx:id="btnV" layoutX="152.0" layoutY="442.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="V" />
+            <Button fx:id="btnB" layoutX="184.0" layoutY="442.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="B" />
+            <Button fx:id="btnN" layoutX="216.0" layoutY="442.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="N" />
+            <Button fx:id="btnM" layoutX="248.0" layoutY="442.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="M" />
+            <Button fx:id="btnBack" layoutX="280.0" layoutY="442.0" onAction="#backButton" prefHeight="45.0" prefWidth="44.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="Back" />
+            <Button fx:id="btnA" layoutX="29.0" layoutY="392.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="A" />
+            <Button fx:id="btnS" layoutX="61.0" layoutY="392.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="S" />
+            <Button fx:id="btnD" layoutX="93.0" layoutY="392.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="D" />
+            <Button fx:id="btnF" layoutX="125.0" layoutY="392.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="F" />
+            <Button fx:id="btnG" layoutX="157.0" layoutY="392.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="G" />
+            <Button fx:id="btnH" layoutX="189.0" layoutY="392.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="H" />
+            <Button fx:id="btnJ" layoutX="221.0" layoutY="392.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="J" />
+            <Button fx:id="btnK" layoutX="253.0" layoutY="392.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="K" />
+            <Button fx:id="btnL" layoutX="285.0" layoutY="392.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="L" />
+            <Button fx:id="btnQ" layoutX="7.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="Q">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button fx:id="btnW" layoutX="39.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="W">
+            <font>
+               <Font size="11.0" />
+            </font></Button>
+            <Button fx:id="btnE" layoutX="71.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="E" />
+            <Button fx:id="btnR" layoutX="103.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="R" />
+            <Button fx:id="btnT" layoutX="135.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="T" />
+            <Button fx:id="btnY" layoutX="167.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="Y" />
+            <Button fx:id="btnU" layoutX="199.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="U" />
+            <Button fx:id="btnI" layoutX="231.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="I" />
+            <Button fx:id="btnO" layoutX="263.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="O" />
+            <Button fx:id="btnP" layoutX="295.0" layoutY="342.0" onAction="#onButtonClick" prefHeight="45.0" prefWidth="28.0" style="-fx-background-color: #828385; -fx-text-fill: white; -fx-font-weight: bold;" text="P" />
+
+
+            <Label fx:id="lblCorrectGuess" layoutX="36.0" layoutY="162.0" opacity="0.0" text="Word guessed correctly!" textFill="WHITE">
             <font>
                <Font size="24.0" />
             </font>

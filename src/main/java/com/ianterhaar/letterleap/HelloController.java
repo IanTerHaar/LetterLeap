@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
 import java.io.BufferedReader;
@@ -118,9 +119,20 @@ public class HelloController {
             tiles.add(tile811);
             tiles.add(tile911);
             tiles.add(tile1011);
-            selectRandomWord();
 
+            // Set the background color of the root VBox
+            VBox root = (VBox) lblCorrectGuess.getScene().getRoot();
+            root.setStyle("-fx-background-color: #121212;");
+
+            // Optionally, set the default background color for the tiles
+            for (Label tile : tiles) {
+                tile.setStyle("-fx-border-color: #383838; -fx-alignment: center; -fx-font-size: 20; -fx-background-color: #121212;");
+            }
+
+            selectRandomWord();
         });
+
+
     }
 
     @FXML
@@ -183,6 +195,7 @@ public class HelloController {
         Label currentTile = getCurrentTile();
         if (currentTile != null) {
             currentTile.setText(letter);
+            currentTile.setTextFill(Color.WHITE);
             System.out.println("Added letter " + letter + " to tile: " + currentTile.getId());
         }
     }
@@ -280,17 +293,21 @@ public class HelloController {
 
                 // Set the background color based on the guess
                 if (guess.charAt(i) == wordToGuess.charAt(i)) {
-                    tile.setStyle("-fx-background-color: green; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
+                    tile.setStyle("-fx-background-color: #528d4d; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
                 } else if (wordToGuess.contains(String.valueOf(guess.charAt(i)))) {
-                    tile.setStyle("-fx-background-color: #979701; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
+                    tile.setStyle("-fx-background-color: #b59f3a; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
                 } else {
-                    tile.setStyle("-fx-background-color: gray; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
+                    tile.setStyle("-fx-background-color: #3a3a3c; -fx-text-fill: white; -fx-alignment: center; -fx-font-size: 17");
                 }
+
+                // Ensure the text color remains white
+                tile.setTextFill(Color.WHITE);
 
                 // Optionally, set text alignment to center in case it's not applied
                 tile.setAlignment(javafx.geometry.Pos.CENTER);
             }
         }
     }
+
 }
 
