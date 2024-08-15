@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class HelloController {
+public class Controller {
     @FXML
     private Label tile1, tile2, tile3, tile4, tile5;
     @FXML
