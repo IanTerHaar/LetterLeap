@@ -1,6 +1,9 @@
 # LetterLeap
 
-LetterLeap is a word puzzle game inspired by the popular "Wordle" game.
+- LetterLeap (thank you chatGPT for the most cringe name ever) is a word puzzle game inspired by the 
+popular "Wordle" game ('merica please don't sue).
+- This project was attempted to see if I can actually create something functioning and 
+pretty without my protential job taker, ChatGPT.
 
 ## Table of Contents
 - [Features](#features)
@@ -8,12 +11,12 @@ LetterLeap is a word puzzle game inspired by the popular "Wordle" game.
 - [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Word List](#word-list)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Features
 
 - Feedback for each guess to indicate correct letters and positions
-- Intuitive and user-friendly interface built with JavaFX
+- The ability to guess words that you might think does not actually exist (they do I promise)
 
 ## Installation
 
@@ -45,8 +48,5 @@ Ensure that you have JavaFX and the required libraries set up in your project. Y
 
 The word lists used in this game were obtained from my [letter_scraper](https://github.com/IanTerHaar/letter_scraper) repository.
 
-## Acknowledgments
 
-- [IanTerHaar/letter_scraper](https://github.com/IanTerHaar/letter_scraper) for providing the word lists used in this game.
-- The JavaFX community for their excellent resources and libraries.
 
