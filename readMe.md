@@ -6,11 +6,14 @@ popular "Wordle" game ('merica please don't sue).
 pretty without my protential job taker, ChatGPT.
 
 ## Table of Contents
+- [Screenshot](#screenshot)
 - [Features](#features)
 - [Installation](#installation)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Word List](#word-list)
+
+## Screenshot
 
 
 ## Features
