@@ -14,7 +14,7 @@ pretty without my protential job taker, ChatGPT.
 - [Word List](#word-list)
 
 ## Screenshot
-
+![letterleap](https://github.com/user-attachments/assets/05884754-0095-4d8a-9bb0-60b4f505370a)
 
 ## Features
 
